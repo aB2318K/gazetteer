@@ -1,0 +1,94 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    opacity: 0; /* Initially hide the content */
+    transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+    pointer-events: none; /* Make the content not clickable while hidden */
+}
+
+#content.show {
+    opacity: 1; /* Show the content when the 'show' class is applied */
+    pointer-events: auto; /* Allow interaction with the content when shown */
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+  
+#selectContainer {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 11px 0;
+}
+  
+#countrySelect {
+    width: 200px;
+    margin: 0 auto;
+}
+
+#flag img {
+    max-height: 100px;
+    max-width: calc(100px * 1.5); 
+}
+
+#newsModal .modal-dialog {
+    max-width: 500px; 
+  }
+
+#newsCarousel .carousel-inner img {
+   max-width: 100%;
+   height: 300px;
+}
+
+#newsCarousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff; 
+    padding: 10px; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#wikiImage {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+  }
+  
+  #loader {
+    border: 10px solid #333; 
+    border-top: 6px solid #fff; 
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+  
+  
